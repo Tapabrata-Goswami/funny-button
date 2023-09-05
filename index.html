@@ -13,18 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mouse Game</title>
-    <style>
-        .toggle button{
-            border-radius: 50%;
-            padding:10px;
-            border:none;
-            padding:20px 22px;
-            box-shadow: 2px 2px 7px rgb(77, 77, 77);
-        }
-        .fa-sun, .fa-moon{
-            font-size: 18px;
-        }
-    </style>
 </head>
 
 <body>
@@ -52,38 +40,7 @@
     </section>
    
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script>
-        var width = $("#container").width() - 120;
-        var height = $("#container").height() - 40;
-
-        function run() {
-            var top = Math.random() * height;
-            var left = Math.random() * width;
-            $('#change').css('top', top + 'px').css('left', left + 'px');
-        }
-
-        $(document).ready(function () {
-            var count = 0;
-            $("#change").text("😅 Click Me");
-            $('#change').mouseover(run);
-            $('#change').mouseover(function () {
-                $("#change").css("display", "none");
-            });
-            $('#change').mouseleave(function () {
-                $("#change").css("display", "block");
-                $("#change").text("🤣 Click Me");
-            });
-            $('#change').mousemove(run);
-            $("#change").click(function () {
-                $("#score span").text(count);
-                count++;
-            });
-            $("#theme-change").click(function(){
-                $("#theme-change").html('<i class="fa-solid fa-moon"></i>');
-                $("body").toggleClass("dark");
-            })
-        });
-    </script>
+    <script type="text/javascript" src="js/index.js"></script>
 
 </body>
 
